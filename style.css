@@ -96,3 +96,24 @@ p {
     transform: rotate(30deg);
   }
 }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .coltext {
+    width: 95%;
+    box-sizing: border-box;
+  }
+
+  .container .baris .wadah .tombol {
+    position: absolute;
+    top: 110px;
+    right: 20px;
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: x-small;
+    border-radius: 3px;
+  }
+}

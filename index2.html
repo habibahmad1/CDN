@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      ::selection {
+        background-color: palegreen;
+        color: white;
+      }
+      button {
+        padding: 3px 8px;
+        border: none;
+        background-color: aquamarine;
+        border-radius: 3px;
+        box-shadow: 2px 2px 2px black;
+        cursor: pointer;
+      }
+      textarea {
+        resize: none;
+        overflow: hidden;
+        border-radius: 7px;
+      }
+      textarea#wadah1 {
+        background-color: brown;
+        color: white;
+      }
+      textarea#wadah2 {
+        background-color: blueviolet;
+        color: white;
+      }
+      textarea#wadah3 {
+        background-color: coral;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Teks 1</h1>
+    <textarea id="wadah1" readonly>
+        <h1>Hello World!</h1>
+    </textarea>
+    <button onclick="copyText('wadah1')">Copy Teks 1</button>
+
+    <h1>teks 2</h1>
+    <textarea id="wadah2" readonly>
+       <h1>Ok Berhasil</h1>
+    </textarea>
+    <button onclick="copyText('wadah2')">Copy Teks 2</button>
+
+    <h1>teks 3</h1>
+    <textarea id="wadah3" readonly>
+       <h1>Baris 3</h1>
+    </textarea>
+    <button onclick="copyText('wadah3')">Copy Teks 3</button>
+
+    <script>
+      function copyText(id) {
+        const wadah = document.querySelector("#" + id);
+        wadah.select();
+        document.execCommand("Copy");
+        alert("Berhasil disalin : " + wadah.value);
+      }
+    </script>
+  </body>
+</html>

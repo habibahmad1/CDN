@@ -4,3 +4,8 @@ function copyText(button) {
   document.execCommand("copy"); // Menyalin teks yang dipilih ke clipboard
   alert("Teks telah disalin: " + textarea.value); // Menampilkan pesan alert
 }
+
+const tahun = document.querySelector(".tahun");
+const tahunIni = new Date();
+const ambilTahun = tahunIni.getFullYear();
+tahun.innerHTML = ambilTahun;

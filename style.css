@@ -96,6 +96,25 @@ p {
   }
 }
 
+footer {
+  height: 50px;
+  background-color: #ffa200;
+  text-align: center;
+  color: white;
+  line-height: 50px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.love {
+  color: red;
+  cursor: pointer;
+}
+
+.love:hover {
+  color: #ff4d6d;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   .coltext {
